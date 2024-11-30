@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: georgia;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.game {
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 5px 10px #00000067;
+}
+.result {
+    text-align: center;
+    background-color: #ffb200d7;
+    padding: 5px;
+    border-radius: 7px;
+}
+.players {
+    display: flex;
+    margin: 30px 0px;
+    justify-content: space-around;
+    align-items: center;
+}
+.user, .comp {
+    font-size: 3.5rem;
+}
+.user {
+    transform: rotateZ(90deg) rotateY(180deg);
+    position: relative;
+}
+.comp {
+    transform: rotateZ(-90deg);
+    position: relative;
+}
+.game-history {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1.5px solid #bebebe;
+}
+.history {
+    text-align: center;
+}
+.player-choice {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 0px;
+}
+.emoji {
+    font-size: 2.5rem;
+    margin: 10px 0px;
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    transition: 0.4s;
+}
+.emoji:active {
+    transform: scale(0.8);
+    background-color: #afafaf;
+}
+.user-move {
+    padding: 5px 30px;
+    border-radius: 7px;
+    display: inline;
+    background-color: #ffb200cd;
+}
+.userhand {
+    animation: user 0.5s ease-in-out alternate infinite;
+}
+@keyframes user {
+    from{
+        bottom: 5px;
+        rotate: -10deg;
+    }
+    to{
+        bottom: -5px;
+        rotate: 10deg;
+    }
+}
+.comphand {
+    animation: comp 0.5s ease-in-out alternate infinite;
+}
+@keyframes comp {
+    from{
+        bottom: 5px;
+        rotate: 10deg;
+    }
+    to{
+        bottom: -5px;
+        rotate: -10deg;
+    }
+}
